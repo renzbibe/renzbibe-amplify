@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amplify - Music Shop</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inconsolata:wght@200..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+  <link rel="stylesheet" href="styles/stylesheet.css">
+  <link rel="stylesheet" href="styles/loading.css">
+  <link rel="icon" href="images/logo-2.png">
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="navbar navbar-dark nav-style">
+
+    <div class="container d-flex justify-content-center">
+      <a href="index.html" class="navbar-brand nav-brand-style"><img src="images/logo-2.png" alt="logo" class="img-fluid logo-image">AMPLIFY | CHECKOUT</a>
+    </div>
+  </nav>
+
+  <section id="checkout">
+    <div class="container p-0 alert-notification js-alert-notification">
+      <div class="alert alert-danger alert-message" role="alert">
+        Something went wrong - please see fields marked in red. 
+      </div>
+    </div>
+    
+    <div class="container p-0 d-flex flex-column-reverse flex-sm-row checkout-container">
+      
+      <form novalidate action="index.html" class="checkout-form js-checkout-form">
+        <div class="d-flex flex-column gap-3 checkout-container-details">
+          <div>
+            <div class="order-heading">
+              <p class="table-heading checkout-table-heading">Billing Details</p>
+            </div>
+            <div class="order-content">
+              <label for="" class="form-label">Email:</label>
+              <input type="email" class="form-control form-control-sm js-email" placeholder="example@email.com">
+              <label for="" class="form-label">First Name:</label>
+              <input type="text" class="form-control form-control-sm js-first-name" placeholder="First Name" name="first-name" autocomplete="off">
+              <label for="" class="form-label">Last Name:</label>
+              <input type="text" class="form-control form-control-sm js-last-name" placeholder="Last Name">
+              <label for="" class="form-label">Address Line 1:</label>
+              <input type="text" class="form-control form-control-sm js-address-one" placeholder="e.g. House Number Street Name, Town/City">
+              <label for="" class="form-label">Address Line 2: (optional)</label>
+              <input type="text" class="form-control form-control-sm js-address-two" placeholder="e.g. Apartment Number, Building Name, Floor Number">
+              <label for="" class="form-label">Postal Code:</label>
+              <input type="text" class="form-control form-control-sm js-postcode" placeholder="Postal Code/Zip Code">
+              <label for="" class="form-label">County:</label>
+              <input type="text" class="form-control form-control-sm js-county" placeholder="County">
+            </div>
+          </div>
+          <div>
+            <div class="order-heading">
+              <button type="button" class="btn w-100 text-start d-flex justify-content-between align-items-center js-delivery-address-button" data-bs-toggle="collapse" data-bs-target="#address" aria-expanded="false" aria-controls="address"><span class="table-heading checkout-table-heading">Different Delivery Address?</span> <i class="fa fa-sort-down arrow-down"></i></button>
+            </div>
+            
+            <div class="collapse order-content" id="address">
+              <label for="" class="form-label">First Name:</label>
+              <input type="text" class="form-control form-control-sm js-delivery-first-name" placeholder="First Name">
+              <label for="" class="form-label">Last Name:</label>
+              <input type="text" class="form-control form-control-sm js-delivery-last-name" placeholder="Last Name">
+              <label for="" class="form-label">Address Line 1:</label>
+              <input type="text" class="form-control form-control-sm js-delivery-address-one" placeholder="e.g. House Number Street Name, Town/City">
+              <label for="" class="form-label">Address Line 2: (optional)</label>
+              <input type="text" class="form-control form-control-sm js-delivery-address-two" placeholder="e.g. Apartment Number, Building Name, Floor Number">
+              <label for="" class="form-label">Postal Code:</label>
+              <input type="text" class="form-control form-control-sm js-delivery-postcode" placeholder="Postal Code/Zip Code">
+              <label for="" class="form-label">County:</label>
+              <input type="text" class="form-control form-control-sm js-delivery-county" placeholder="County"> 
+            </div>
+          </div>
+          <div>
+            <div class="order-heading">
+              <p class="table-heading checkout-table-heading">Payment</p>
+            </div>
+            <div class="order-content">
+              <label for="" class="form-label">Card Number:</label>
+              <input type="text" class="form-control form-control-sm js-card-number" placeholder="XXXX-XXXX-XXXX-XXXX" maxlength="19">
+              <label for="" class="form-label">Expiry Date and Security Number:</label>
+              <div class="d-flex gap-2">
+
+                <div class="">
+                  <p class="form-small-label">Month</p>
+                  <input type="text" class="form-control form-control-sm form-small-input js-expiry-month" placeholder="MM" maxlength="2">
+                </div>
+
+                <div class="">
+                  <p class="form-small-label">Year</p>
+                  <input type="text" class="form-control form-control-sm form-small-input js-expiry-year" placeholder="YY" maxlength="2">
+                </div>
+
+                <div class="">
+                  <p class="form-small-label">CVC</p>
+                  <input type="text" class="form-control form-control-sm form-small-input js-security-number" placeholder="CVC" maxlength="3">
+                </div>
+                
+              </div>
+              <label for="" class="form-label">Name on Card:</label>
+              <input type="text" class="form-control form-control-sm js-card-name" placeholder="Name">
+            </div>
+          </div>
+          <div class="text-end">
+            <button type="submit" class="confirm-payment-button">Confirm</button>
+          </div>
+        </div>
+      
+      </form>
+      <div class="checkout-container-summary">
+        <div>
+          <div class="d-flex justify-content-between align-items-center order-heading">
+            <p class="table-heading checkout-table-heading js-checkout-quantity">
+              Number of Items
+            </p>
+            <span class="me-2">
+              <button class="checkout-edit-button" data-bs-toggle="modal" data-bs-target="#popup-message">EDIT CART</button>
+              <div class="modal fade" id="popup-message">
+                <div class="modal-dialog modal-dialog-centered modal-container">
+                  <div class="modal-content">
+                    <div class="d-flex justify-content-between align-items-center order-heading">
+                      <p class="table-heading checkout-table-heading">Return to your cart?</p>
+                      <button class="me-2 popup-remove-icon" data-bs-dismiss="modal"><i class="fa fa-remove"></i></button>
+                    </div>
+                    <div class="order-content">
+                      <p class="text-center mt-2 mb-3 popup-message">Are you sure you want to go back and edit your cart?</p>
+                      <div class="d-flex justify-content-center gap-2">
+                        <button class="js-checkout-edit-button popup-confirm">Yes</button>
+                        <button class="popup-cancel" data-bs-dismiss="modal">Cancel</button>
+                      </div>
+                    </div>
+            
+                  </div>
+                </div>
+              </div>
+            </span>
+          </div>
+          <div class="order-content summary-content">
+            <div class="summary-orders js-summary-orders">
+              <!-- JAVASCRIPT GOES HERE -->
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <div class="d-flex justify-content-between">
+                <p>Subtotal</p>
+                <p class="js-summary-subtotal">£10.00</p>
+              </div>
+
+              <div class="d-flex justify-content-between">
+                <p>Delivery - <span class="fw-bold js-delivery-option"></span></p>
+                <p class="js-summary-delivery">£1.99</p>
+              </div>
+
+              <div class="d-flex justify-content-between fw-bold">
+                <p>TOTAL TO PAY</p>
+                <p class="js-summary-total">£11.99</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="loader-fullscreen">
+    <div class="loader-circle"></div>
+  </div>
+  <script type="module" src="scripts/checkout.js"></script>
+  <script type="module" src="scripts/delivery.js"></script>
+  <script type="module" src="scripts/checkout-data-validation.js"></script>
+  
+</body>
+</html>
