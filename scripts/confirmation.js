@@ -54,7 +54,7 @@ cart.forEach((item) => {
     </div> 
     <div class="col-8 col-md-10 ps-4 d-flex flex-column justify-content-around
     gap-2">
-      <p><span class="confirmation-heading-text">Order Name:</span> ${matchingProduct.name}</p>
+      <p><span class="confirmation-heading-text">Order Name:</span> ${matchingProduct.color} ${matchingProduct.name}</p>
       <p><span class="confirmation-heading-text">Quantity:</span> ${item.quantity}</p>
       <p><span class="confirmation-heading-text">Price:</span> £${formatCurrency(matchingProduct.price)}</p>
     </div>
